@@ -11,6 +11,10 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     //MARK: - Properties
+    
+    private lazy var cocktailDataManager = CocktailDataManager()
+    var coordinatorDelegate: MainVCCoordinatorProtocol?
+    
     private var cocktailList: CocktailList?{
         didSet{
             DispatchQueue.main.async {
@@ -19,15 +23,25 @@ class MainScreenViewController: UIViewController {
         }
     }
     
-    private lazy var cocktailDataManager = CocktailDataManager()
-    var coordinatorDelegate: MainVCCoordinatorProtocol?
+    private var filterType: CocktailType? {
+        didSet{
+            getData()
+        }
+    }
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "All Cocktails"
-        getData()
+        filterType = .unknown
+    }
+    
+    //MARK: - Actions
+    @IBAction func filterValueChanged(_ sender: Any) {
+        guard let segment = sender as? UISegmentedControl else { return }
+        let title = segment.titleForSegment(at: segment.selectedSegmentIndex) ?? ""
+        let type = CocktailType(title: title)
+        filterType = type
     }
 }
 
@@ -35,7 +49,7 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController{
     private func getData(){
         activityIndicatorView.startAnimating()
-        cocktailDataManager.fetchCocktails {[weak self] (result) in
+        cocktailDataManager.fetchCocktails(type: filterType ?? .unknown) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.activityIndicatorView.stopAnimating()
             }

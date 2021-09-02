@@ -7,15 +7,31 @@
 
 import Foundation
 
-enum CocktailType: String {
-    
+enum CocktailType: String, CaseIterable {
     case alcoholic
     case nonAlcoholic = "non-alcoholic"
     case unknown
+    
+    init?(title: String) {
+        for value in CocktailType.allCases where "\(value.title)" == title {
+            self = value
+            return
+        }
+        return nil
+    }
+    
+    var title : String {
+        switch self {
+        case .alcoholic: return "Alcoholic"
+        case .nonAlcoholic: return "Non-Alcoholic"
+        case .unknown: return "All"
+        }
+    }
 }
 
 extension CocktailType: Codable {
     init(from decoder: Decoder) throws {
+        //default type is alcoholic
         self = try CocktailType(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
     }
 }

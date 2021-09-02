@@ -7,8 +7,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     if let windowScene = scene as? UIWindowScene {
+        
+        let navController = UINavigationController()
+        let mainCoordinator = MainCoordinator(navigationController: navController)
+        mainCoordinator.start()
+        
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = MainScreenViewController()
+        window.rootViewController = navController
         self.window = window
         window.makeKeyAndVisible()
     }

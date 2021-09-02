@@ -16,15 +16,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oVq-6I-aly">
-                    <rect key="frame" x="8" y="10" width="20" height="15.5"/>
+                    <rect key="frame" x="0.0" y="10" width="20" height="15.5"/>
                     <color key="tintColor" systemColor="labelColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="VeM-it-rQ2"/>
                         <constraint firstAttribute="height" constant="20" id="pDi-2w-mTx"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9v-lk-PY6">
-                    <rect key="frame" x="36" y="8" width="194" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iasdjflksdjf sdfkjdsfh ksjdfhkjskjdf kjsdfjksdfjk kjsdfsdfj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9v-lk-PY6">
+                    <rect key="frame" x="28" y="8" width="202" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,12 +34,11 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="X9v-lk-PY6" secondAttribute="trailing" constant="8" id="4pM-QE-Ynl"/>
-                <constraint firstItem="oVq-6I-aly" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="FBA-yQ-rUz"/>
                 <constraint firstItem="Xml-sX-4bt" firstAttribute="bottom" secondItem="X9v-lk-PY6" secondAttribute="bottom" constant="8" id="G0H-kt-KBg"/>
                 <constraint firstItem="X9v-lk-PY6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="V8L-NZ-zrV"/>
-                <constraint firstItem="oVq-6I-aly" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="WZ2-KM-Izd"/>
+                <constraint firstItem="oVq-6I-aly" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WZ2-KM-Izd"/>
                 <constraint firstItem="X9v-lk-PY6" firstAttribute="leading" secondItem="oVq-6I-aly" secondAttribute="trailing" constant="8" id="aF6-qi-pCS"/>
-                <constraint firstAttribute="bottom" secondItem="oVq-6I-aly" secondAttribute="bottom" constant="8" id="xdK-w4-lJI"/>
+                <constraint firstItem="oVq-6I-aly" firstAttribute="centerY" secondItem="X9v-lk-PY6" secondAttribute="centerY" id="xl6-ee-Ujj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

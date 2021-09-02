@@ -32,7 +32,7 @@ final class CocktailDataManager {
                     }
                     //sort
                     cocktails = cocktails.sorted { $0.name < $1.name }
-                    //create view mdoel
+                    //create view model
                     let cocktailList = CocktailList(cocktails: cocktails)
                     //return
                     completion(.success(cocktailList))

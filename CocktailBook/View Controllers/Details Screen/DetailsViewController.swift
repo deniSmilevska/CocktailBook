@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
     //MARK: - Properties
     var cocktailItem: CocktailListItem?
     private lazy var dataManager = CocktailDataManager()
@@ -26,7 +26,7 @@ class DetailsViewController: UIViewController {
         configureView()
         // Do any additional setup after loading the view.
     }
-
+    
     //MARK: - Actions
     @IBAction func favoriteButtonAction(_ sender: Any) {
         
@@ -46,10 +46,12 @@ class DetailsViewController: UIViewController {
         preparationTimeLabel.text = cocktailItem?.preparationTime ?? ""
         imageView.image = cocktailItem?.image
         longDescriptionLabel.text = cocktailItem?.longDescription
-        for i in 0...(cocktailItem?.ingredientsCount ?? 0) {
-            let label = UILabel()
-            label.text = cocktailItem?.ingredient(index: i)
-            ingredientsStackView.addArrangedSubview(label)
+        if let count = cocktailItem?.ingredientsCount, count > 0 {
+            for i in 0...count-1 {
+                let ingredientView: IngredientView = .fromNib()
+                ingredientView.setupView(text: cocktailItem?.ingredient(index: i) ?? "")
+                ingredientsStackView.addArrangedSubview(ingredientView)
+            }
         }
     }
 }

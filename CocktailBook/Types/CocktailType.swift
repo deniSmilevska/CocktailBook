@@ -27,6 +27,10 @@ enum CocktailType: String, CaseIterable {
         case .unknown: return "All"
         }
     }
+    
+    var navTitle: String {
+        return "\(title) Cocktails"
+    }
 }
 
 extension CocktailType: Codable {

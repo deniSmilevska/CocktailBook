@@ -25,6 +25,7 @@ class MainScreenViewController: UIViewController {
     
     private var filterType: CocktailType? {
         didSet{
+            title = filterType?.navTitle
             getData()
         }
     }
@@ -32,7 +33,6 @@ class MainScreenViewController: UIViewController {
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "All Cocktails"
         filterType = .unknown
     }
     

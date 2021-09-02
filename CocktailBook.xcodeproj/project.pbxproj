@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B8752EA26E107B1005327D4 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8752E926E107B1005327D4 /* IngredientView.swift */; };
+		3B8752EC26E107BE005327D4 /* IngredientView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8752EB26E107BE005327D4 /* IngredientView.xib */; };
+		3B8752EE26E10932005327D4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8752ED26E10932005327D4 /* UIView+Extension.swift */; };
 		3BD9110326DFB829007B0EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9110226DFB829007B0EC9 /* Main.storyboard */; };
 		3BD9110526DFB860007B0EC9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9110426DFB860007B0EC9 /* Coordinator.swift */; };
 		3BD9110926DFBCFF007B0EC9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9110826DFBCFF007B0EC9 /* MainCoordinator.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B8752E926E107B1005327D4 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
+		3B8752EB26E107BE005327D4 /* IngredientView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientView.xib; sourceTree = "<group>"; };
+		3B8752ED26E10932005327D4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		3BD9110226DFB829007B0EC9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3BD9110426DFB860007B0EC9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3BD9110826DFBCFF007B0EC9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -114,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B8752E826E1079A005327D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B8752E926E107B1005327D4 /* IngredientView.swift */,
+				3B8752EB26E107BE005327D4 /* IngredientView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3BD910F526DFB59A007B0EC9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				3BD9110C26DFBDAD007B0EC9 /* UIViewController+Extension.swift */,
+				3B8752ED26E10932005327D4 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 		3BD9110026DFB809007B0EC9 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3B8752E826E1079A005327D4 /* Views */,
 				3BD9112E26DFCD5B007B0EC9 /* Protocols */,
 				3BD9112626DFCC13007B0EC9 /* Table View Cells */,
 				3BD9111826DFC29C007B0EC9 /* View Models */,
@@ -435,6 +452,7 @@
 				E8324E86262076EE00FD2124 /* LaunchScreen.storyboard in Resources */,
 				E8324ED42624809F00FD2124 /* sample.json in Resources */,
 				3BD9113426DFD384007B0EC9 /* CocktailTableViewCell.xib in Resources */,
+				3B8752EC26E107BE005327D4 /* IngredientView.xib in Resources */,
 				E8324E80262076EE00FD2124 /* Assets.xcassets in Resources */,
 				3BD9110326DFB829007B0EC9 /* Main.storyboard in Resources */,
 			);
@@ -461,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8752EE26E10932005327D4 /* UIView+Extension.swift in Sources */,
 				3BD9111C26DFC2DC007B0EC9 /* CocktailList.swift in Sources */,
 				3BD9113226DFCE16007B0EC9 /* CocktailType.swift in Sources */,
 				3BD9112A26DFCC4F007B0EC9 /* CocktailTableViewCell.swift in Sources */,
@@ -479,6 +498,7 @@
 				3BD9110D26DFBDAD007B0EC9 /* UIViewController+Extension.swift in Sources */,
 				3BD9110526DFB860007B0EC9 /* Coordinator.swift in Sources */,
 				3BD9111726DFC148007B0EC9 /* DetailsViewController.swift in Sources */,
+				3B8752EA26E107B1005327D4 /* IngredientView.swift in Sources */,
 				3BD9113026DFCD69007B0EC9 /* CocktailPresentable.swift in Sources */,
 				3BD9111126DFC07D007B0EC9 /* Cocktail.swift in Sources */,
 			);
